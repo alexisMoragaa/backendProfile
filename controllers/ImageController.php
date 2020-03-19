@@ -3,8 +3,8 @@
 namespace app\controllers;
 
 use yii\rest\ActiveController;
-use app\models\Hobbies;
-class HobbiesController extends ActiveController
+use app\models\Images;
+class ImageController extends ActiveController
 {
 
   public function behaviors() {
@@ -23,7 +23,7 @@ class HobbiesController extends ActiveController
     return $behaviors;
 }
 
-  public $modelClass = 'app\models\Hobbies';
+  public $modelClass = 'app\models\Images';
 
 
     public function actionIndex()
@@ -33,11 +33,8 @@ class HobbiesController extends ActiveController
     }
 
 
-
-
-
-    public function actionMyHobbie($id){
-      return Hobbies::findOne($id);
+    public function actionImages($idGallery){
+      return Images::find()->where(['idImgGallery' => $idGallery])->all();
     }
 
 }

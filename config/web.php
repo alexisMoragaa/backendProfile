@@ -16,6 +16,9 @@ $config = [
           'parsers' => [
               'application/json' => 'yii\web\JsonParser',
           ],
+          // 'cors' =>[
+          //   'Origin' => ['*']
+          // ],
             // !!! insert a secret key in the following (if it is empty) - this is required by cookie validation
             'cookieValidationKey' => 'tEgby6nMs7DPSZ-0VeU1CDz9DldnPBWN',
         ],
@@ -52,7 +55,7 @@ $config = [
             'showScriptName' => false,
             'rules' => [
               ['class' => 'yii\rest\UrlRule', 'controller' => 'apiuser'],
-              // ['class' => 'yii\rest\UrlRule', 'controller' => 'hobbies'],
+              ['class' => 'yii\rest\UrlRule', 'controller' => 'hobbies'],
             ],
         ],
 
